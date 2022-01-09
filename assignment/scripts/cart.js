@@ -14,7 +14,8 @@ function addItem(item) {
 console.log(addItem('Ramen')); // console should also log true
 console.log(addItem('Carrots'));
 console.log(addItem('Popcorn'));
-
+console.log(addItem('Pizza'));
+console.log(addItem('Sweetbread'));
 
 function listItems(){
   let x = 1; // initializes additional varible for flavor text
@@ -25,4 +26,20 @@ function listItems(){
 }
 
 //testing function
-listItems();
+console.log(basket); //shows items and their order
+listItems(); // lists item, which matches what was shown above
+
+function empty(array){
+  item = array.length -1; // initialize iterating varible to last array item
+  while (item >= 0) { //checks if interated to/past the beginning of array
+    array.pop(array[item]); //removes last array item
+    item--;
+  }
+  console.log('Yor basket is now empty!'); // log to indicate function was succesful
+  return true;
+}
+
+//testing function
+console.log(basket); // shows basket has items
+console.log(empty(basket));
+console.log(basket); // shows basket empty, meaning function was successful
